@@ -5,10 +5,12 @@
         </div>
     </div>
     <div class="row jumbotron" ng-repeat="match in matches">
-    	<fieldset>
-	        <div class="col-md-12 col-xs-12">Name: {{match.name}}</div>
-	        <div class="col-md-12 col-xs-12">Breed: {{match.breed}}</div>
-	        <div class="col-md-12 col-xs-12">Age: {{match.birthday}}</div>
-        </fieldset>
+        <div class="col-md-1 col-xs-1" ng-click="pass(match.id)">No<!--<i class="glyphicon glyphicon-arrow-left"></i>--></div>
+        <div class="col-md-10 col-xs-10">
+            <p class="bg-info">Name: {{match.name}}</p>
+            <p class="bg-info">Breed: {{match.breed}}</p>
+            <p class="bg-info">Age: {{match.birthday}}</p>
+        </div>
+        <div class="col-md-1 col-xs-1" ng-click="matchdogs(match.id)">Si<!--<i class="glyphicon glyphicon-arrow-right"></i>--></div>
     </div>
 </div>                    

@@ -4,4 +4,13 @@
             <h4>FINDER</h4>
         </div>
     </div>
+    <div class="row" ng-repeat="dog in founded">
+        <div class="col-md-12 col-xs-12">Email: {{dog.contact_email}}</div>
+        <div class="col-md-12 col-xs-12">Phone: {{dog.contact_phone}}</div>
+        <div class="col-md-12 col-xs-12">Geop: {{dog.geoposition}}</div>
+        <div class="col-md-12 col-xs-12">Name: {{dog.name}}</div>
+        <div class="col-md-12 col-xs-12">Surname: {{dog.surname}}</div>
+        <div class="col-md-12 col-xs-12">Breed: {{dog.breed}}</div>
+        <div class="col-md-12 col-xs-12">Age: {{dog.birthday}}</div>
+    </div>
 </div>                    
