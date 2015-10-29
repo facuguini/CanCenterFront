@@ -2,20 +2,22 @@
 app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	new FastClick(document.body);
 	
-	$scope.username = "";
-	$scope.password = "";
+	$scope.username = '';
+	$scope.password = '';
+
+	$scope.dogs = null;
 
 	$scope.login = function() {
-		$http.get(
-			{ 	
-				method: 'GET',
-				url: 'localhost:5000/getUserDog',
-				data: {username: $scope.username, password: $scope.password}
-			}).then(function successCallback(response) {
-    			console.log(response);
-    		}, function errorCallback(err) {
-    			console.log(err);
-    		});
+		$http.post('http://localhost:5000/login', 
+			{
+				username: $scope.username, 
+				pass: $scope.password
+			}).success(function(data){
+	        	console.log(data);
+        		$scope.dogs = data;
+	    	}).error(function (err){
+	    		console.log(err)
+    	});
 	};
 }]);
 

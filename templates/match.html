@@ -4,4 +4,11 @@
             <h4>Matcher</h4>
         </div>
     </div>
+    <div class="row jumbotron" ng-repeat="match in matches">
+    	<fieldset>
+	        <div class="col-md-12 col-xs-12">Name: {{match.name}}</div>
+	        <div class="col-md-12 col-xs-12">Breed: {{match.breed}}</div>
+	        <div class="col-md-12 col-xs-12">Age: {{match.birthday}}</div>
+        </fieldset>
+    </div>
 </div>                    

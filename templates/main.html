@@ -3,10 +3,23 @@
         <div class="col-md-12 col-xs-12">
             <h4>Bienvenido a CanDer</h4>
             <h5>La app que le gusta a la vieja de tu perro</h5>
-
-            <input type='text' ng-model='username' />
-            <input type='password' ng-model='password' />
-            <input type='button' ng-click='login()' />
+            <form ng-submit='login()'>
+            	<label for='user'>Username</label>
+	            <input id='user' type='text' ng-model='username' />
+            	<label for='password'>Password</label>
+	            <input id='password' type='password' ng-model='password' />
+	            <input type='button' ng-click='login()' value='login' />
+	        </form>
+        </div>
+    </div>
+    <div class="row" ng-repeat="dog in dogs">
+        <div class="col-md-12 col-xs-12">Name: {{dog.name}}</div>
+        <div class="col-md-12 col-xs-12">Breed: {{dog.breed}}</div>
+        <div class="col-md-12 col-xs-12">Age: {{dog.birthday}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <a ng-href="/#/matcher" class="button">CanDer</a>
         </div>
     </div>
 </div>                    
